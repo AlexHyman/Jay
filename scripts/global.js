@@ -388,15 +388,15 @@ function getHTTPObject() {
 }
 
 function displayAjaxLoading(element) {
-    // Remove the existing content.
+    // 移除现有内容
     while (element.hasChildNodes()) {
         element.removeChild(element.lastChild);
     }
-    //  Create a loading image.
+    //  创建加载图像
     var content = document.createElement("img");
     content.setAttribute("src","images/loading.gif");
     content.setAttribute("alt","Loading...");
-    // Append the loading element.
+    // 添加加载元素
     element.appendChild(content);
 }
 
@@ -405,10 +405,10 @@ function submitFormWithAjax( whichform, thetarget ) {
     var request = getHTTPObject();
     if (!request) { return false; }
 
-    // Display a loading message.
+    // 显示加载信息
     displayAjaxLoading(thetarget);
 
-    // Collect the data.
+    // 收集数据
     var dataParts = [];
     var element;
     for (var i=0; i<whichform.elements.length; i++) {
